@@ -3,18 +3,27 @@
     <head>
         <title>FSA-Visualizer</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="FSA-V.js"></script>
     </head>
     <body>
-        <div class="header">
-            <h1 class="title">FSA Visualizer</h1>
-            <a href="learn-more.html">Learn More</a>
+        <div class="container">
+            <div class="header">
+                <h1 id="title">FSA Visualizer</h1>
+                <a href="learn-more.html">Learn More</a>
+            </div>
+            <!--The form / script for generating the FSA-->
+            <div class="user-input-area">
+                <form>
+                    <label for="regexin">Regular Expression Input:</label>
+                    <input type="text" name="regexin" id="regexin">
+                </form>
+                <button onclick="genFSA(document.getElementById('regexin').value)">Visualize</button>
+            </div>
+
+            <div class="error-message">
+                <label id="err_msg"></label>
+            </div>
+
         </div>
-        <!--The form / script for generating the FSA-->
-        <form>
-            <label for="regexin">Regular Expression Input:{</label>
-            <input type="text" name="regexin" id="regexin">}
-        </form>
-        <button onclick="genFSA(document.getElementById('regexin').value)">Click</button>
-        <script src="FSA-V.js"></script>
     </body>
 </html>

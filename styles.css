@@ -1,5 +1,37 @@
+html {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+a {
+    color: #0645AD;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    padding-top: 1em;
+    padding-bottom: 4em;
+}
+
+.error-message {
+    padding: 1em;
+    color: red;
+}
+
+.user-input-area {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
